@@ -25,7 +25,7 @@ const Registration = () => {
             height={150}
             className="w-12 md:w-16 lg:w-20"
           />
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-red-600 font-leckerli">
+          <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold text-red-600 font-leckerli">
             Registration
           </h1>
           <Image

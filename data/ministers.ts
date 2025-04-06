@@ -102,7 +102,7 @@ export const ministers: Minister[] = [
       height: 260,
     },
     {
-      image: "/speaker2/utpal.png",
+      image: "/speaker2/utpal2.svg",
       width: 200,
       height: 280,
     },
@@ -113,7 +113,7 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/manuspillai.png",
-      width: 220,
+      width: 235,
       height: 210,
     },
     {
@@ -138,7 +138,7 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/nitinkamth.png",
-      width: 210,
+      width: 214,
       height: 260,
     },
     {
@@ -158,12 +158,12 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/shantanugupta.png",
-      width: 200,
+      width: 220,
       height: 260,
     },
     {
       image: "/speaker2/shridhar.png",
-      width: 205,
+      width: 220,
       height: 280,
     },
     {
@@ -173,7 +173,7 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/ravena.png",
-      width: 238,
+      width: 225,
       height: 210,
     },
     {
@@ -198,7 +198,7 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/shefalivadiya.png",
-      width: 265,
+      width: 225,
       height: 260,
     },
     {
@@ -248,7 +248,7 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/ashomallick.png",
-      width: 195,
+      width: 215,
       height: 280,
     },
     {
@@ -258,7 +258,7 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/watermanrajendrasingh.png",
-      width: 230,
+      width: 210,
       height: 280,
     },
     {
@@ -278,7 +278,7 @@ export const ministers: Minister[] = [
     },
     {
       image: "/speaker2/malharkalambe.png",
-      width: 243,
+      width: 213,
       height: 210,
     },
     {

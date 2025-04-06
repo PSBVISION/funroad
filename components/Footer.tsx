@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 function Footer({ className }: React.ComponentProps<"div">) {
   const socialIcons = [
     { Icon: Facebook, link: "https://www.facebook.com/purilitfest" },
-    { Icon: Twitter, link: "https://x.com/PuriLitFest" },
+    // { Icon: Twitter, link: "https://x.com/PuriLitFest" },
     { Icon: Instagram, link: "https://www.instagram.com/purilitfest" },
     { Icon: Youtube, link: "https://youtube.com/@purilitfest" },
   ];
@@ -15,7 +15,7 @@ function Footer({ className }: React.ComponentProps<"div">) {
   const footerLinks = {
     "About us": [
       { label: "About The Festival", href: "/aboutus" },
-      
+
       { label: "Terms & Condition", href: "/terms" },
       { label: "FAQs", href: "/faq" },
     ],
@@ -24,15 +24,23 @@ function Footer({ className }: React.ComponentProps<"div">) {
       { label: "Programs", href: "/programs" },
     ],
     "Important Links": [
-      { label: "Volunteer", href: "/volunteer" },
-      { label: "Partner With Us", href: "/partner" },
+      { label: "Volunteer", href: "https://forms.gle/Btj1d5yy5cs9o5zp8" },
+      {
+        label: "Partner With Us",
+        href: "https://forms.gle/rvxZaKdMdkXy8z5Y9",
+      },
     ],
   };
 
   return (
     <>
       {/* Desktop Footer */}
-      <footer className={cn("md:block hidden md:h-140 xl:h-180 relative font-ebGaramond z-50", className)}>
+      <footer
+        className={cn(
+          "md:block hidden md:h-140 xl:h-180 relative font-ebGaramond z-50",
+          className
+        )}
+      >
         {/* Background wave image */}
         <div className="absolute inset-0 z-10 w-full h-full mx-auto">
           <Image
@@ -68,9 +76,45 @@ function Footer({ className }: React.ComponentProps<"div">) {
                     target="_blank"
                     className="hover:scale-110 transition-transform"
                   >
-                    <Icon color="#FFC81E" size={24} className="sm:size-5 md:size-5 lg:size-7" />
+                    <Icon
+                      color="#FFC81E"
+                      size={24}
+                      className="sm:size-5 md:size-5 lg:size-7"
+                    />
                   </Link>
                 ))}
+                <Link
+                  href="https://x.com/PuriLitFest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="33"
+                    viewBox="0 0 256 256"
+                    className="hover:scale-105 transition-transform duration-300"
+                  >
+                    <g
+                      fill="#FFC81E"
+                      fillRule="nonzero"
+                      stroke="none"
+                      strokeWidth="1"
+                      strokeLinecap="butt"
+                      strokeLinejoin="miter"
+                      strokeMiterlimit="10"
+                      fontFamily="none"
+                      fontWeight="none"
+                      fontSize="none"
+                      textAnchor="none"
+                      style={{ mixBlendMode: "normal" }}
+                    >
+                      <g transform="scale(8.53333,8.53333)">
+                        <path d="M26.37,26l-8.795,-12.822l0.015,0.012l7.93,-9.19h-2.65l-6.46,7.48l-5.13,-7.48h-6.95l8.211,11.971l-0.001,-0.001l-8.66,10.03h2.65l7.182,-8.322l5.708,8.322zM10.23,6l12.34,18h-2.1l-12.35,-18z"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </Link>
               </div>
             </div>
 

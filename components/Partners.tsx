@@ -146,7 +146,7 @@ const Partners: React.FC = () => {
       animate={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
       className="flex flex-col items-center min-h-[30vh] md:min-h-[70vh] justify-center gap-10 md:gap-15 px-4 sm:px-6 lg:px-8 py-12"
     >
-      <h1 className="md:block text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-leckerli text-[#FF0707]">
+      <h1 className="md:block text-center text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-leckerli text-[#FF0707]">
         <Link href="./partners">Partners</Link>
       </h1>
 

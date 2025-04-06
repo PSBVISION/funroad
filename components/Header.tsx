@@ -49,7 +49,9 @@ function Header() {
         <div className="flex space-x-3">
           <Mail className="text-white text-lg flex-cols justify-left size-[15px] md:size-[20px]" />
           <p className="text-white text-[10px]  md:text-sm flex-cols justify-left">
-            purliteraryfestival@gmail.com
+            <Link href="mailto:purliteraryfestival@gmail">
+              purliteraryfestival@gmail.com
+            </Link>
           </p>{" "}
         </div>
         <div className="flex space-x-3">

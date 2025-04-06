@@ -670,7 +670,7 @@ const Page = () => {
       </h1>
       {/* Ministers Grid - Responsive */}
       <div className="container mx-auto  py-10 items-center justify-center flex ">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6  md:gap-0">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6  md:gap-0 mx-4">
           {ministers.map((minister, index) => (
             <div key={index} className="relative flex flex-col items-center">
               {/* Red Background Circle */}

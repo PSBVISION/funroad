@@ -219,7 +219,7 @@ function Hero() {
           height={52}
           className="object-contain ml-5 size-25 xl:size-42"
         /> */}
-         <motion.h1
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -227,16 +227,15 @@ function Hero() {
         >
           TAJ
         </motion.h1>
-        
-         <motion.h1
+
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="text-center font-ebGaramond md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-[#B9975A]  "
         >
-          PURI  RESORT & SPA, ODISHA
+          PURI RESORT & SPA, ODISHA
         </motion.h1>
-        
       </div>
       <div className=" hero-temple-img bg-center bg-cover bg-no-repeat h-[95vh] hidden md:block mt-12 "></div>
       {/* Mobile View */}
@@ -252,7 +251,6 @@ function Hero() {
       <div className="md:hidden block">
         <h1 className="text-center font-libreBodoni text-[#D72327] md:text-sm lg:text-lg">
           18th APRIL - 20th APRIL 2025
-          
         </h1>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -260,9 +258,9 @@ function Hero() {
           transition={{ duration: 1 }}
           className="text-center font-ebGaramond md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl text-[#B9975A]  "
         >
-          PURI  RESORT & SPA, ODISHA
+          PURI RESORT & SPA, ODISHA
         </motion.h1>
-        
+
         {/* <Image
           // src="https://ik.imagekit.io/zjaqik2mc/homehero/tajLogo.svg?updatedAt=1743486468570"
           src="/mainpage/tajLogo.svg"
@@ -271,7 +269,7 @@ function Hero() {
           height={52}
           className="object-contain mx-auto -my-5 size-25 xl:size-42"
         /> */}
-        
+
         <p className="text-center font-libreBodoni text-xl py-8 text-[#D72327] w-3/4 mx-auto">
           <span className="text-[#2F3082]">Weaving Stories of</span>
           <span className="text-[#D72327]">

@@ -577,12 +577,12 @@ const page = () => {
             />
           </div>
           <p className="text-[#000000] text-sm md:text-base md:pt-12 font-ebGaramond text-justify md:hidden mb-24  px-8">
-              From the savory flavors of and Pakhala Bhata to the sweet delights
-              of Chhena Poda and Rasagola, the festival will be a gastronomic
-              journey for food enthusiasts. Live cooking demonstrations will
-              showcase the preparation of these iconic dishes, paired with
-              stories about their cultural significance.
-            </p>
+            From the savory flavors of and Pakhala Bhata to the sweet delights
+            of Chhena Poda and Rasagola, the festival will be a gastronomic
+            journey for food enthusiasts. Live cooking demonstrations will
+            showcase the preparation of these iconic dishes, paired with stories
+            about their cultural significance.
+          </p>
         </div>
       </div>
 

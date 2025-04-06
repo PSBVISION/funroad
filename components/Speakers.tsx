@@ -13,23 +13,27 @@ function Speakers() {
   const speakers = [
     {
       name: "Sh. Gajendra Singh Shekhawat",
-      position: "Union Minister of Culture and Tourism, Government of India.",
+      position: "Union Minister of Culture and Tourism, ",
+      position1:"Government of India.",
       image: "/Sh. Gajendra Singh Shekhawat.svg",
     },
     {
       name: "Sh. Sarbananda Sonowal",
-      position: "Union Minister of Ports, Shipping & Waterways, Government of India.",
+      position: "Union Minister of Ports,",
+      position1:" Shipping & Waterways, Government of India.",
       image: "/Sarvanand Sonowal Ji’s.svg",
     },
     {
       name: "Sh. Dharmendra Pradhan",
-      position: "Union Minister of Education, Government of India.",
+      position: "Union Minister of Education,",
+      position1:" Government of India.",
       image: "/Sh. Dharmendra Pradhan.svg",
     },
 
     {
       name: "Sh. Shashi Tharoor",
-      position: "MP for Thiruvananthapuram, ExMinister of State , Government of India",
+      position: "MP for Thiruvananthapuram,",
+      position1:" Ex Minister of State , Government of India",
       image: "/shashitharoor.svg",
     },
   ];
@@ -69,7 +73,7 @@ function Speakers() {
 
         {/* Title Section */}
         <div className="text-center md:w-1/3 z-10 md:mt-0 mt-34 mb-10 md:mb-0">
-          <h1 className="text-xl sm:text-4xl md:p-0 pt-10 md:text-5xl lg:text-5xl text-[#E90909] font-leckerli">
+          <h1 className="text-xl sm:text-4xl md:p-0 pt-10 md:text-4xl lg:text-4xl text-[#E90909] font-leckerli">
             Puri Lit Fest&apos;s
             <br />
             Speakers
@@ -130,6 +134,9 @@ function Speakers() {
                   </h3>
                   <p className="text-[#FFFCF5] text-xs  font-ebGaramond">
                     {speaker.position}
+                  </p>
+                  <p className="text-[#FFFCF5] text-xs  font-ebGaramond">
+                    {speaker.position1}
                   </p>
                 </div>
               </div>
