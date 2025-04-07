@@ -506,7 +506,12 @@ const Page = () => {
           </span>
         </h1>
       </motion.div>
-      <motion.div variants={fadeIn} initial="hidden" animate="visible" className="relative -z-20">
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        animate="visible"
+        className="relative -z-20"
+      >
         <Image
           src="/aboutus/leftelephant.svg"
           alt="Decorative element"
@@ -699,7 +704,7 @@ const Page = () => {
 
       {/* teams */}
 
-      <div className="relative w-full min-h-[280vh] flex items-center justify-center overflow-hidden">
+      <div className="relative w-full min-h-[210vh] md:min-h-[280vh] flex items-center justify-center overflow-hidden">
         <div className="bg-[#D72327] absolute top-0 w-full h-200 -z-30"></div>
         {/* Background Image - EDIT: Replace with your actual background image */}
         <Image
@@ -720,9 +725,9 @@ const Page = () => {
         />
 
         {/*  founding director */}
-        <div className="relative w-full max-w-6xl px-4 sm:px-6 lg:px-0 py-1 flex flex-col items-center justify-center z-5 pt-20">
+        <div className="relative w-full max-w-6xl px-4 sm:px-6 lg:px-0 py-1 flex flex-col items-center justify-center z-5 pt-0 md:pt-20">
           {/* Founding Title with Decorative Elements */}
-          <div className="flex justify-center items-center gap-2 mb-4 mt-20">
+          <div className="flex justify-center items-center gap-2 mb-4 mt-0 md:mt-20">
             <Image
               src="/shank.svg"
               alt="Decorative element"
@@ -743,7 +748,7 @@ const Page = () => {
           </div>
 
           {/* Polaroid-style photo cards */}
-          <div className="w-full max-w-[1100px] mt-10 mb-45 hidden md:block">
+          <div className="w-full md:max-w-[1100px] mt-10 mb-45 hidden md:block">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
               {team2
                 .slice(0, Math.floor(team2.length / 3) * 3)
@@ -803,48 +808,47 @@ const Page = () => {
               </div>
             )}
           </div>
-          <div className="w-full max-w-[1100px] mt-10 mb-45 md:hidden block">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
-    {team2.map((person, index) => {
-      const total = team2.length;
-      const itemsInLastRow = total % 3;
-      const startOfLastRow = Math.floor(total / 3) * 3;
+          <div className="w-full max-w-[800px] mt-0 mb-45 md:hidden block">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+              {team2.map((person, index) => {
+                const total = team2.length;
+                const itemsInLastRow = total % 3;
+                const startOfLastRow = Math.floor(total / 3) * 3;
 
-      const isSingleItemLastRow =
-        itemsInLastRow === 1 && index === total - 1;
-      const isTwoItemLastRow =
-        itemsInLastRow === 2 && index >= startOfLastRow;
+                const isSingleItemLastRow =
+                  itemsInLastRow === 1 && index === total - 1;
+                const isTwoItemLastRow =
+                  itemsInLastRow === 2 && index >= startOfLastRow;
 
-      return (
-        <motion.div
-          key={index}
-          className={`relative w-full max-w-[260px] aspect-square 
+                return (
+                  <motion.div
+                    key={index}
+                    className={`relative w-full max-w-[260px] aspect-square 
             ${isSingleItemLastRow ? "md:col-span-3 justify-self-center" : ""}
             ${isTwoItemLastRow ? "md:col-span-1" : ""}
           `}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Link
-            href={person.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={person.image}
-              alt={`${person.name} ${person.surname}`}
-              layout="fill"
-              objectFit="contain"
-              className="rounded-xl hover:scale-105 transition-transform duration-300"
-            />
-          </Link>
-        </motion.div>
-      );
-    })}
-  </div>
-</div>
-
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    <Link
+                      href={person.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src={person.image}
+                        alt={`${person.name} ${person.surname}`}
+                        layout="fill"
+                        objectFit="contain"
+                        className="rounded-xl hover:scale-105 transition-transform duration-300"
+                      />
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         <div className="bg-[#D72327] absolute top-0 w-full h-20 -z-30"></div>
