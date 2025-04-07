@@ -1,24 +1,3 @@
-// "use client"
-
-// import Image from 'next/image'
-// import React from 'react'
-
-// import Hero from '@/components/aboutus/hero'
-// import Our from '@/components/aboutus/our'
-
-// const page = () => {
-//   return (
-//     <div className='realtive w-full '>
-
-//       <Hero />
-//       <Our/>
-
-//     </div>
-//   )
-// }
-
-// export default page
-
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -39,9 +18,9 @@ const Page = () => {
       image: "/aboutus/ompriyadarshi.png",
       about1: (
         <>
-          Traversing across all states and more than{" "}
+          Traversing across all states and more than
           <span className="font-semibold">6,000 villages</span> in India, Omm
-          Priyadarshi has gained deep insights from the country’s{" "}
+          Priyadarshi has gained deep insights from the country&apos;s
           <span className="font-semibold">
             diverse socio-economic fabric, establishing himself as a
             distinguished voice in development and policy advocacy.
@@ -54,7 +33,7 @@ const Page = () => {
           <span className="font-semibold">
             author of Paika: Jana, Akhyana O Andolana,
           </span>{" "}
-          and a recipient of the Prime Minister’s Young Author Award.
+          and a recipient of the Prime Minister&apos;s Young Author Award.
         </>
       ),
       about3: (
@@ -254,15 +233,19 @@ const Page = () => {
   ];
   const footerLinks = {
     "About us": [
-      "About The Festival",
-      // "Teamwork Arts",
-      "Contact Us",
-      "Terms & Condition",
-      // "Privacy & Policies",
-      "FAQs",
+      { label: "About The Festival", href: "/aboutus" },
+
+      { label: "Terms & Condition", href: "/terms" },
+      { label: "FAQs", href: "/faq" },
     ],
-    Events: ["Brochure", "Programs"],
-    "Important Links": ["Volunteer", "Partner With Us"],
+    Events: [
+      { label: "Brochure", href: "/aboutus" },
+      { label: "Programs", href: "/programs" },
+    ],
+    "Important Links": [
+      { label: "Volunteer", href: "/volunteer" },
+      { label: "Partner With Us", href: "/partner" },
+    ],
   };
   return (
     <div className="relative overflow-x-hidden pt-22 ">
@@ -316,7 +299,7 @@ const Page = () => {
           alt="Left decoration"
           width={390}
           height={520}
-          className="absolute left-[-0rem] bottom-[-2rem] md:bottom-[-10rem] w-32 md:w-96 z-30"
+          className="absolute left-[-0rem] -bottom-[4.1rem] md:bottom-[-10rem] w-32 md:w-96 z-30"
         />
 
         {/* Center Decorative Image */}
@@ -334,7 +317,7 @@ const Page = () => {
           alt="Right decoration"
           width={390}
           height={520}
-          className="absolute right-[-0rem] bottom-[-2rem] md:bottom-[-10rem] w-32 md:w-96 scale-x-[-1] z-20"
+          className="absolute right-[-0rem] -bottom-[4.1rem] md:bottom-[-10rem] w-32 md:w-96 scale-x-[-1] z-20"
         />
       </div>
       <div className="relative w-full flex flex-col items-center justify-center">
@@ -500,7 +483,7 @@ const Page = () => {
             alt="Decorative element"
             width={600}
             height={600}
-            className="block md:hidden w-ful h-44l "
+            className="block md:hidden w-full h-44l "
           />
         </div>
       </div>
@@ -510,42 +493,9 @@ const Page = () => {
         variants={fadeIn}
         initial="hidden"
         animate="visible"
-        className="relative flex items-center justify-center min-h-[60vh] md:min-h-[80vh] text-center flex-col overflow-hidden "
+        className="relative flex items-center justify-center min-h-[50vh] md:min-h-[80vh] text-center flex-col overflow-hidden md:z-0 z-10"
       >
         {/* Left Elephant Image */}
-        <Image
-          src="/aboutus/leftelephant.svg"
-          alt="Decorative element"
-          width={390}
-          height={520}
-          className="
-     absolute 
-  bottom-10 sm:bottom-20 md:-bottom-15 
-  left-0 
-  z-20 
-  w-24 sm:w-32 md:w-40 lg:w-88 
-  h-auto 
-  max-w-none
-    "
-        />
-
-        {/* Right Elephant Image (mirrored) */}
-        <Image
-          src="/aboutus/leftelephant.svg"
-          alt="Decorative element"
-          width={390}
-          height={520}
-          className="
-      absolute 
-      right-0 
-      bottom-2 sm:bottom-4 md:-bottom-10 
-      z-20 
-      w-24 sm:w-32 md:w-40 lg:w-88 
-      h-auto 
-      scale-x-[-1]
-      max-w-none
-    "
-        />
 
         <h1 className="text-[#2F3082] text-xl md:text-4xl font-semibold font-ebGaramond">
           पुरुषोत्तम क्षेत्रं वैकुण्ठस्य सदृशं
@@ -556,117 +506,127 @@ const Page = () => {
           </span>
         </h1>
       </motion.div>
+      <motion.div variants={fadeIn} initial="hidden" animate="visible" className="relative -z-20">
+        <Image
+          src="/aboutus/leftelephant.svg"
+          alt="Decorative element"
+          width={390}
+          height={520}
+          className="absolute -bottom-10 sm:-bottom-7 md:-bottom-15 left-0 z-20 w-24 sm:w-32 md:w-40 lg:w-88 h-auto max-w-none"
+        />
 
-      <div className="relative w-full min-h-screen sm:min-h-[150vh] md:min-h-[200vh] lg:min-h-[278vh] flex items-center justify-center overflow-hidden z-60">
-        {/* Background Image - EDIT: Replace with your actual background image */}
+        {/* Right Elephant Image (mirrored) */}
+        <Image
+          src="/aboutus/leftelephant.svg"
+          alt="Decorative element"
+          width={390}
+          height={520}
+          className="
+        absolute 
+        right-0 
+        -bottom-15 sm:-bottom-7 md:-bottom-10  
+        w-24 sm:w-32 md:w-40 lg:w-88 
+        h-auto 
+        scale-x-[-1]
+        max-w-none
+        "
+        />
+      </motion.div>
+      <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden md:z-60">
+        {/* Background Images */}
         <Image
           src="/aboutus/bluebg.png"
           alt="Background"
           layout="fill"
-          objectFit="cover"
-          className="md:block hidden absolute inset-0 -z-10"
+          objectFit="conrain"
+          className="hidden md:block absolute inset-0 -z-10"
           priority
         />
         <Image
           src="/mobilefoundingbg2.svg"
-          alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="block md:hidden absolute inset-0 -z-10"
+          alt="Mobile Background"
+          width={200}
+          height={200}
+          className="block md:hidden absolute inset-0 -z-10 w-full h-full object-cover"
           priority
         />
 
-        {/*  founding director */}
-        <div className="relative w-full max-w-7xl px-4 sm:px-6 lg:px-0 py-1 flex flex-col items-center">
-          {/* Founding Title with Decorative Elements */}
-          <div className="flex justify-center items-center gap-2 mb-4">
-            {/* EDIT: Replace with your actual decorative image */}
-            <Image
-              src="/shank.svg"
-              alt="Decorative element"
-              width={60}
-              height={150}
-              className="w-8 sm:w-10 md:w-12 lg:w-16"
-            />
-            {/* EDIT: Change the title text if needed */}
-            <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-[#D72327] font-leckerli">
-              Founding
-            </h1>
-            {/* EDIT: Replace with your actual decorative image */}
-            <Image
-              src="/shank.svg"
-              alt="Decorative element"
-              width={60}
-              height={150}
-              className="w-8 sm:w-10 md:w-12 lg:w-16 scale-x-[-1]"
-            />
+        {/* Main Content */}
+        <div className="relative w-full max-w-7xl px-4 sm:px-6 lg:px-12 py-15 md:py-20 flex flex-col items-center">
+          {/* Title */}
+          <div className="mb-24 md:mb-0 md:mt-15">
+            <div className="flex justify-center items-center gap-2 mb-10 md:mt-25">
+              <Image
+                src="/shank.svg"
+                alt="Decorative element"
+                width={60}
+                height={150}
+                className="w-8 sm:w-10 md:w-12 lg:w-16"
+              />
+              <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-[#D72327] font-leckerli">
+                Founding
+                <br /> Directors
+              </h1>
+              <Image
+                src="/shank.svg"
+                alt="Decorative element"
+                width={60}
+                height={150}
+                className="w-8 sm:w-10 md:w-12 lg:w-16 scale-x-[-1]"
+              />
+            </div>
           </div>
-
-          {/* Director Title - EDIT: Change the title text if needed */}
-          <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-[#D72327] font-leckerli md:mb-12">
-            Directors
-          </h1>
-
-          {/* Polaroid-style photo cards */}
-          <div className="flex flex-col w-full  mx-10 justify-center">
+          {/* Director Cards */}
+          <div className="flex flex-col w-full px-5 space-y-5 md:space-y-20">
             {directors.map((director, index) => (
               <motion.div
                 key={index}
-                className={`flex flex-col md:flex-row items-center  gap-8 md:gap-10 lg:gap-10 space-y-12 ${
-                  index % 2 === 1 ? "md:flex-row-reverse" : ""
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className={`flex flex-row items-center justify-between gap-8 md:gap-16 ${
+                  index % 2 === 1 ? "flex-row-reverse" : ""
                 }`}
               >
-                {/* Polaroid card with photo */}
-                <div className="  md:w-[500px] mt-20   ">
-                  <motion.div
-                    key={index}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className={`flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-30 relative w-full aspect-square ${
-                      index % 2 === 1 ? "md:flex-row-reverse" : ""
-                    }`}
-                  >
-                    <Link href={director.link}>
-                      <Image
-                        src={director.image}
-                        alt={`${director.name} ${director.surname}`}
-                        layout="fill"
-                        objectFit="contain"
-                        className=""
-                      />
-                    </Link>
-                  </motion.div>
+                {/* Image */}
+                <div className="w-[30%] md:w-[40%] relative aspect-[3/4] max-w-[400px]">
+                  <Link href={director.link}>
+                    <Image
+                      src={director.image}
+                      alt={`${director.name} ${director.surname}`}
+                      layout="fill"
+                      objectFit="contain"
+                      className="rounded-xl"
+                    />
+                  </Link>
                 </div>
 
-                {/* About paragraph */}
-                <div className="max-w-4xl text-center md:text-left ">
-                  <p className="text-xl  font-light text-white font-ebGaramond text-justify">
-                    {director.about1}
-                  </p>
-                  <p className="text-xl  font-light text-white pt-3 font-ebGaramond text-justify">
-                    {director.about2}
-                  </p>
-                  <p className="text-xl  font-light text-white pt-3 font-ebGaramond text-justify">
-                    {director.about3}
-                  </p>
+                {/* Text */}
+                <div className="w-[70%] md:w-[60%] max-w-3xl text-white text-[10px] md:text-lg font-light font-ebGaramond text-justify md:space-y-4 px-2">
+                  {director.about1 && <p>{director.about1}</p>}
+                  {director.about2 && <p>{director.about2}</p>}
+                  {director.about3 && <p>{director.about3}</p>}
                 </div>
               </motion.div>
             ))}
           </div>
 
+          {/* Decorative Element */}
           <Image
             src="/bookflyingkid.svg"
             alt="Decorative element"
             width={384}
             height={512}
-            className="absolute  md:-bottom-80 -right-[5%] z-40 w-24 md:w-70 h-130"
+            className="absolute bottom-0 md:-bottom-60 right-0 z-40 w-24 md:w-40 lg:w-52"
           />
         </div>
-        <div className="bg-[#D72327] absolute bottom-0 w-full h-42 -z-30"></div>
+
+        {/* Bottom Red Bar */}
+        <div className="bg-[#D72327] absolute bottom-0 w-full h-40 -z-30"></div>
       </div>
 
-      <div className="mx-2 md:mx-0 md:mt-0 relative bg-[#D72327]  h-[1000px] overflow-hidden">
+      <div className="relative bg-[#D72327] min-h-screen overflow-hidden w-full">
+        {/* Header with Shanks and Title */}
         <div className="flex justify-center items-center gap-2 mb-8 pt-12">
           <Image
             src="/shank.svg"
@@ -677,7 +637,7 @@ const Page = () => {
           />
 
           <div className="text-center">
-            <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-[#FFC40C] font-leckerli leading-tight mt-20">
+            <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-[#FFC40C] font-leckerli leading-tight mt-10 sm:mt-16 md:mt-20">
               Festival
               <br />
               <span>Co-ordinators</span>
@@ -693,49 +653,42 @@ const Page = () => {
           />
         </div>
 
-        {/* Floating Images */}
-
+        {/* Floating Illustration */}
         <Image
           src="/bookstackabus.svg"
           alt="Decorative element"
           width={384}
           height={512}
-          className="absolute -bottom-20 md:-bottom-40 -left-3 md:left-0 z-20 w-20 md:w-36"
+          className="absolute -bottom-20 md:-bottom-40 -left-3 md:left-0 z-20 w-20 sm:w-28 md:w-36"
         />
 
-        {/* Grid */}
-        <div className="px-4 md:px-[200px] pt-12">
+        {/* Grid Section */}
+        <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-45 pt-12 mx-auto">
           {team.length > 0 && (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-4 justify-center ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
               {team.map((member, index) => (
                 <motion.div
                   key={index}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="flex justify-center "
+                  className="flex justify-center w-full"
                 >
                   <Link
                     href={member.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full max-w-lg"
+                    className="block w-full max-w-[260px]"
                   >
-                    <div className="relative w-full aspect-square  overflow-hidden">
+                    <div className="relative w-[260px] aspect-square md:w-[300px] md:h-[350px] overflow-hidden">
                       <Image
                         src={member.image}
                         alt={`${member.name} ${member.surname}`}
                         layout="fill"
                         objectFit="contain"
-                        className="rounded-lg "
+                        className="rounded-xl hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-
-                    {/* Optional Name Text */}
-                    {/* <div className="text-center mt-2 text-white">
-                          <p className="text-sm md:text-xl font-serif">{member.name}</p>
-                          <p className="text-sm md:text-xl font-serif">{member.surname}</p>
-                        </div> */}
                   </Link>
                 </motion.div>
               ))}
@@ -747,7 +700,7 @@ const Page = () => {
       {/* teams */}
 
       <div className="relative w-full min-h-[280vh] flex items-center justify-center overflow-hidden">
-        <div className="bg-[#D72327] absolute top-0 w-full h-42 -z-30"></div>
+        <div className="bg-[#D72327] absolute top-0 w-full h-200 -z-30"></div>
         {/* Background Image - EDIT: Replace with your actual background image */}
         <Image
           src="/aboutus/yellowbgabout3.png"
@@ -758,7 +711,7 @@ const Page = () => {
           priority
         />
         <Image
-          src="/mobilefoundingbg2.svg"
+          src="/aboutus/mobileyellowbgabout.svg"
           alt="Background"
           layout="fill"
           objectFit="cover"
@@ -790,35 +743,108 @@ const Page = () => {
           </div>
 
           {/* Polaroid-style photo cards */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-[1100px] justify-items-center mt-10 mb-45">
-            {team2.map((person, index) => (
-              <motion.div
-                key={index}
-                className={`relative w-[300px] h-[420px] ${
-                  team2.length % 3 === 2 && index >= team2.length - 2
-                    ? "col-rows-2 justify-self-center"
-                    : ""
-                }`}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                <Link
-                  href={person.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={person.image}
-                    alt={`${person.name} ${person.surname}`}
-                    layout="fill"
-                    objectFit="contain"
-                    className=" hover:scale-105 transition-transform duration-300"
-                  />
-                </Link>
-              </motion.div>
-            ))}
+          <div className="w-full max-w-[1100px] mt-10 mb-45 hidden md:block">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+              {team2
+                .slice(0, Math.floor(team2.length / 3) * 3)
+                .map((person, index) => (
+                  <motion.div
+                    key={index}
+                    className="relative w-[300px] h-[420px]"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    <Link
+                      href={person.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src={person.image}
+                        alt={`${person.name} ${person.surname}`}
+                        layout="fill"
+                        objectFit="contain"
+                        className="hover:scale-105 transition-transform duration-300"
+                      />
+                    </Link>
+                  </motion.div>
+                ))}
+            </div>
+
+            {/* Last Row (flex only if leftover) */}
+            {team2.length % 3 !== 0 && (
+              <div className="flex justify-evenly gap-6 md:gap-8 mt-6">
+                {team2
+                  .slice(Math.floor(team2.length / 3) * 3)
+                  .map((person, index) => (
+                    <motion.div
+                      key={`last-${index}`}
+                      className="relative w-[300px] h-[420px]"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                    >
+                      <Link
+                        href={person.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src={person.image}
+                          alt={`${person.name} ${person.surname}`}
+                          layout="fill"
+                          objectFit="contain"
+                          className="hover:scale-105 transition-transform duration-300"
+                        />
+                      </Link>
+                    </motion.div>
+                  ))}
+              </div>
+            )}
           </div>
+          <div className="w-full max-w-[1100px] mt-10 mb-45 md:hidden block">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+    {team2.map((person, index) => {
+      const total = team2.length;
+      const itemsInLastRow = total % 3;
+      const startOfLastRow = Math.floor(total / 3) * 3;
+
+      const isSingleItemLastRow =
+        itemsInLastRow === 1 && index === total - 1;
+      const isTwoItemLastRow =
+        itemsInLastRow === 2 && index >= startOfLastRow;
+
+      return (
+        <motion.div
+          key={index}
+          className={`relative w-full max-w-[260px] aspect-square 
+            ${isSingleItemLastRow ? "md:col-span-3 justify-self-center" : ""}
+            ${isTwoItemLastRow ? "md:col-span-1" : ""}
+          `}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Link
+            href={person.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={person.image}
+              alt={`${person.name} ${person.surname}`}
+              layout="fill"
+              objectFit="contain"
+              className="rounded-xl hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
+        </motion.div>
+      );
+    })}
+  </div>
+</div>
+
         </div>
 
         <div className="bg-[#D72327] absolute top-0 w-full h-20 -z-30"></div>
@@ -896,7 +922,7 @@ const Page = () => {
                           key={linkIndex}
                           className="sm:text-xs md:text-sm lg:text-lg text-[#FFFCF5] hover:text-yellow-300 transition-colors cursor-pointer"
                         >
-                          {link}
+                          {link.href}
                         </li>
                       ))}
                     </ul>
@@ -917,6 +943,76 @@ const Page = () => {
               className="w-full"
               priority
             />
+          </div>
+        </footer>
+        <footer className="md:hidden block relative w-full">
+          {/* Top Wave Background */}
+          <div className="bg-cover bg-no-repeat bg-top footer-waveb h-[25vh] w-full"></div>
+
+          {/* Logo */}
+          <div className="absolute w-full -top-[45%] flex items-center justify-center h-90 -z-10 ">
+            <Image
+              src="/aboutus/sunset.svg"
+              alt="Background"
+              layout="fill"
+              objectFit="contain"
+              className="absolute inset-0 w-full"
+              priority
+            />
+            Punnu
+          </div>
+          <div className="absolute top-6 left-1/2 transform -translate-x-1/2 flex justify-center">
+            <Image
+              src={"/footer/mobilelogo.png"}
+              alt="logo"
+              width={100}
+              height={100}
+              className=" md:hidden w-24 sm:w-28 md:w-32"
+            />
+          </div>
+
+          {/* Footer Content */}
+          <div className="bg-[#2F3081] h-auto py-12 px-6 text-center flex flex-col items-center">
+            <h1 className="text-sm font-leckerli text-[#FFFCF5]">
+              Connect With Us
+            </h1>
+
+            {/* Social Icons */}
+            <div className="flex justify-center space-x-4 mt-4">
+              {socialIcons.map(({ Icon, link }, index) => (
+                <Link
+                  key={index}
+                  href={link}
+                  target="_blank"
+                  className="hover:scale-110 transition-transform"
+                >
+                  <Icon color="#FFC81E" size={24} />
+                </Link>
+              ))}
+            </div>
+
+            {/* Footer Links */}
+            <div className="grid grid-cols-3 gap-6 mt-6 w-full max-w-sm">
+              {Object.entries(footerLinks).map(([title, links], index) => (
+                <div key={index} className="space-y-2">
+                  <h2 className="text-sm font-leckerli text-[#FFFCF5]">
+                    {title}
+                  </h2>
+                  <ul className="space-y-1">
+                    {links.map(({ label, href }, linkIndex) => (
+                      <li key={linkIndex}>
+                        <Link
+                          href={href}
+                          className="text-xs text-[#FFFCF5] hover:text-yellow-300 transition-colors"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </footer>
       </div>
