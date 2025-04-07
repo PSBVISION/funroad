@@ -685,9 +685,10 @@ const Page = () => {
           className="absolute right-[-2rem] bottom-[-9rem] md:bottom-[-10rem] w-32 md:w-96 scale-x-[-1] -z-20"
         />
       </div>
-      <h1 className="font-leckerli font-bold text-4xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 justify-center flex mt-12">
-        Meet The Speakers
+      <h1 className="font-leckerli font-bold text-3xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 text-center mt-12">
+        Meet <br /> The Speakers
       </h1>
+
       {/* Ministers Grid - Responsive */}
       <div className="container mx-auto  py-10 items-center justify-center flex ">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6  md:gap-0 mx-4">
@@ -710,8 +711,9 @@ const Page = () => {
         </div>
       </div>
 
-      <h1 className="font-leckerli font-bold text-4xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 justify-center flex mt-12">
-        Odia Sessions Speakers
+      <h1 className="font-leckerli font-bold text-3xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 text-center mt-12">
+        Odia <br />
+        Sessions Speakers
       </h1>
 
       <div className="container mx-auto md:px-0 py-10 flex justify-center ">
@@ -735,8 +737,9 @@ const Page = () => {
         </div>
       </div>
 
-      <h1 className="font-leckerli font-bold text-4xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 justify-center flex mt-12">
-        Publishing Houses
+      <h1 className="font-leckerli font-bold text-4xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 text-center mt-12">
+        Publishing <br />
+        Houses
       </h1>
 
       <div className="container mx-auto md:px-0 py-10  justify-center flex">
@@ -759,7 +762,7 @@ const Page = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

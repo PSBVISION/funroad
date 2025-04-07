@@ -272,7 +272,7 @@ const Page = () => {
           alt="Festival logo"
           width={80}
           height={80}
-          className="w-20 h-20 object-cover"
+          className="w-20 h-50 object-contain"
         />
       </div>
 
@@ -493,14 +493,14 @@ const Page = () => {
         variants={fadeIn}
         initial="hidden"
         animate="visible"
-        className="relative flex items-center justify-center min-h-[50vh] md:min-h-[80vh] text-center flex-col overflow-hidden md:z-0 z-10"
+        className="relative flex items-center justify-center min-h-[40vh] md:min-h-[80vh] text-center flex-col overflow-hidden md:z-0 z-10"
       >
         {/* Left Elephant Image */}
 
-        <h1 className="text-[#2F3082] text-xl md:text-4xl font-semibold font-ebGaramond">
+        <h1 className="text-[#2F3082] text-lg md:text-4xl font-semibold font-ebGaramond">
           पुरुषोत्तम क्षेत्रं वैकुण्ठस्य सदृशं
         </h1>
-        <h1 className="text-xl md:text-4xl font-semibold font-ebGaramond md:pt-8">
+        <h1 className="text-lg md:text-4xl font-semibold font-ebGaramond md:pt-8">
           <span className="text-[#D72327] block md:inline font-semibold font-ebGaramond">
             Purushottama kṣhetraṁ Vaikuṇṭhasya sadṛśaṁ
           </span>
@@ -517,7 +517,7 @@ const Page = () => {
           alt="Decorative element"
           width={390}
           height={520}
-          className="absolute -bottom-10 sm:-bottom-7 md:-bottom-15 left-0 z-20 w-24 sm:w-32 md:w-40 lg:w-88 h-auto max-w-none"
+          className="absolute -bottom-10 sm:-bottom-7 md:-bottom-15 left-0 z-20 w-35 sm:w-32 md:w-40 lg:w-88 h-auto max-w-none"
         />
 
         {/* Right Elephant Image (mirrored) */}
@@ -530,7 +530,7 @@ const Page = () => {
         absolute 
         right-0 
         -bottom-15 sm:-bottom-7 md:-bottom-10  
-        w-24 sm:w-32 md:w-40 lg:w-88 
+        w-35 sm:w-32 md:w-40 lg:w-88 
         h-auto 
         scale-x-[-1]
         max-w-none

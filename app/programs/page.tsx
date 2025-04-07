@@ -47,7 +47,7 @@ const page = () => {
         </h1>
 
         {/* Responsive Image */}
-        <div className="w-full flex justify-center mt-16  md:hidden absolute">
+        {/* <div className="w-full flex justify-center mt-16  md:hidden absolute">
           <Image
             src="/programs/programstemple2.png"
             alt="Festival logo"
@@ -55,39 +55,40 @@ const page = () => {
             height={80}
             className="object-contain w-120 h-auto"
           />
-        </div>
 
-        <div className="w-full  justify-center mt-4 md:flex hidden">
+        </div> */}
+
+        <div className="w-full  justify-center md:mt-4 flex">
           <Image
             src="/programs/programstemple2.png"
             alt="Festival logo"
             width={227}
             height={100}
-            className="object-contain w-[90%] max-w-lg md:max-w-lg lg:max-w-lg absolute -left-4 -bottom-106"
+            className="object-contain w-[230px] max-w-lg md:max-w-lg lg:max-w-lg absolute -left-4 md:-bottom-106"
           />
         </div>
-        <div className="absolute -bottom-95 right-12 -z-20 hidden md:block ">
+        <div className="absolute md:-bottom-95  -bottom-64 right-12 -z-20 ">
           <Image
             src="/programs/musician.svg"
             alt="Decorative Line"
             width={357}
             height={52}
-            className="w-3/4 sm:w-1/2 md:w-[350px]  rounded-lg "
+            className="w-[100px] sm:w-1/2 md:w-[350px]  rounded-lg "
           />
         </div>
-        <div className="absolute -bottom-95 right-0 -z-10 hidden md:block ">
+        <div className="absolute md:-bottom-95 -bottom-60 right-0 -z-10 ">
           <Image
             src="/programs/female-dancer.svg"
             alt="Decorative Line"
             width={357}
             height={52}
-            className="w-3/4 sm:w-1/2 md:w-50 rounded-lg "
+            className="w-[60px] sm:w-1/2 md:w-50 rounded-lg "
           />
         </div>
       </div>
 
       {/* Mustard Background Section - Fixed */}
-      <div className="relative w-full min-h-130 md:min-h-[120vh] lg:min-h-260 flex md:items-center justify-center overflow-hidden mt-80 md:mt-60">
+      <div className="relative w-full min-h-130 md:min-h-[120vh] lg:min-h-260 flex md:items-center justify-center overflow-hidden mt-46 md:mt-60">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/mustardbg.svg"
@@ -150,13 +151,13 @@ const page = () => {
             </p>
           </div>
         </div>
-        <div className="absolute md:-bottom-8 bottom-6 right-0  z-20">
+        <div className="absolute md:-bottom-8 bottom-16 right-0  z-20">
           <Image
             src="/programs/warriorhorse.svg"
             alt="Decorative Line"
             width={357}
             height={52}
-            className="w-34 sm:w-1/2 md:w-[357px] rounded-lg"
+            className="w-26 sm:w-1/2 md:w-[357px] rounded-lg"
           />
         </div>
       </div>
@@ -170,7 +171,7 @@ const page = () => {
         />
       </div>
       {/* Voilet */}
-      <div className="relative w-full min-h-[90vh] md:min-h-[120vh] lg:min-h-275 flex items-center justify-center overflow-hidden ">
+      <div className="relative w-full min-h-[100vh] md:min-h-[120vh] lg:min-h-275 flex items-center justify-center overflow-hidden ">
         <div className="absolute inset-0 z-0 h-[70vh] md:h-full w-full hidden md:block">
           <Image
             src="/programs/voiletbg.svg"
@@ -197,15 +198,15 @@ const page = () => {
         </div>
         {/* Your content goes here */}
         <div className=" z-10 flex flex-col md:flex-row items-center  md:items-center w-[400px] md:w-[80%] lg:w-[95%] md:px-20 md:gap-38 gap-0 px-10 ">
-          <h1 className="text-sm md:text-5xl font-bold text-white  font-ebGaramond absolute mt-0 md:mb-0 mb-20   md:hidden ">
+          <h1 className="text-lg md:text-5xl font-bold text-white  font-ebGaramond absolute mt-0 md:mb-0 mb-24   md:hidden ">
             Cultural Night
           </h1>
-          <h2 className="text-xs md:text-4xl text-[#9F6EEA] italic  font-ebGaramond absolute mt-5 md:mb-0   md:hidden ">
+          <h2 className="text-sm md:text-4xl text-[#9F6EEA] italic  font-ebGaramond absolute mt-5  mb-4 md:mb-0   md:hidden ">
             A tapestry of Traditions
           </h2>
           {/* Left Section - Text */}
 
-          <div className="flex justify-center md:mt-12 mt-12  md:hidden md:mb-0 mb-16">
+          <div className="flex justify-center md:mt-12 mt-12  md:hidden md:mb-0 mb-14">
             <Image
               src="/programs/culturalnight.png"
               alt="Decorative Line"
@@ -302,10 +303,10 @@ const page = () => {
 
         <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start w-[90%] md:w-[80%] lg:w-[84%] mx-auto md:gap-30 ">
           {/* Left Section - Text */}
-          <h2 className="text-sm md:text-5xl font-bold text-white  font-ebGaramond md:hidden">
+          <h2 className="text-lg md:text-5xl font-bold text-white  font-ebGaramond md:hidden">
             Gallery of Pattachitra Art
           </h2>
-          <h1 className="text-xs md:text-3xl font-semibold text-[#992586] italic  font-ebGaramond md:hidden mb-2">
+          <h1 className="text-sm md:text-3xl font-semibold text-[#992586] italic  font-ebGaramond md:hidden mb-2">
             Stories in Strokes
           </h1>
           <div className="flex justify-center mt-4 md:mb-15 mb-3">
@@ -314,16 +315,16 @@ const page = () => {
               alt="Decorative Line"
               width={357}
               height={52}
-              className="w-[140px] sm:w-1/2 md:w-105 shadow-[-14px_14px_6px_rgba(0,0,0,0.5)] "
+              className="w-[150px] sm:w-1/2 md:w-105 shadow-[-14px_14px_6px_rgba(0,0,0,0.5)] "
             />
           </div>
 
           {/* Right Section - Image with 3D Shadow */}
           <div className="w-full md:w-1/2 text-center md:text-left mt-10 md:my-auto">
-            <h2 className="text-xl md:text-5xl font-bold text-white  font-ebGaramond md:block hidden">
+            <h2 className="text-lg md:text-5xl font-bold text-white  font-ebGaramond md:block hidden">
               Gallery of Pattachitra Art
             </h2>
-            <h1 className="text-2xl md:text-3xl font-semibold text-[#992586] italic  font-ebGaramond hidden md:block">
+            <h1 className="text-sm md:text-3xl font-semibold text-[#992586] italic  font-ebGaramond hidden md:block">
               Stories in Strokes
             </h1>
             <p className="text-white text-sm md:text-base md:pt-8 font-ebGaramond text-justify mb-40 md:mb-0 px-6 md:px-0">
@@ -382,10 +383,10 @@ const page = () => {
         <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start w-[90%] md:w-[80%] lg:w-[85%] mx-auto  md:gap-50">
           {/* Left Section - Text */}
           <div className="w-full md:w-1/2 text-center md:text-left md:mt-14 md:my-auto">
-            <h1 className="text-3xl md:text-5xl font-bold text-white  font-ebGaramond">
+            <h1 className="text-xl md:text-5xl font-bold text-white  font-ebGaramond">
               Tales by the Tide{" "}
             </h1>
-            <h2 className="text-xl  font-semibold md:text-3xl text-[#2F3082] italic font-ebGaramond">
+            <h2 className="text-sm  font-semibold md:text-3xl text-[#2F3082] italic font-ebGaramond">
               Seaside Storytelling Sessions
             </h2>
             <p className="text-[#000000] text-sm md:text-base pt-12 font-ebGaramond hidden md:block">
@@ -464,10 +465,10 @@ const page = () => {
         <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start w-[90%] md:w-[80%] lg:w-[85%] mx-auto md:gap-30">
           {/* Left Section - Text */}
 
-          <h2 className="text-xl md:text-5xl font-bold text-white md:hidden">
+          <h2 className="text-lg md:text-5xl font-bold text-white md:hidden">
             Timeless Sands of Odisha
           </h2>
-          <h1 className="text-2xl md:text-3xl font-semibold text-[#7F1822] italic  font-ebGaramond md:mt-2 md:hidden">
+          <h1 className="text-sm md:text-3xl font-semibold text-[#7F1822] italic  font-ebGaramond md:mt-2 md:hidden">
             Baluka Kala
           </h1>
 
@@ -551,10 +552,10 @@ const page = () => {
         <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start w-[90%] md:w-[80%] lg:w-[88%] mx-auto md:gap-15">
           {/* Left Section - Text */}
           <div className="w-full md:w-2/3 text-center md:text-left my-auto">
-            <h1 className="text-3xl md:text-5xl font-bold text-white  font-ebGaramond">
+            <h1 className="text-xl md:text-5xl font-bold text-white  font-ebGaramond">
               Food Festival
             </h1>
-            <h2 className="text-xl md:text-4xl font-semibold   text-[#495B0D] italic  font-ebGaramond">
+            <h2 className="text-sm md:text-4xl font-semibold   text-[#495B0D] italic  font-ebGaramond">
               Taste of the Odia Cuisine
             </h2>
             <p className="text-[#000000] text-sm md:text-base md:pt-12 font-ebGaramond hidden md:block">

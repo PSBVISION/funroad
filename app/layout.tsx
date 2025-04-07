@@ -163,7 +163,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-      className={`${interSans.variable} ${interTight.variable} ${leckerliOne.variable} ${libreCaslon.variable} ${libreBodoni.variable} ${pacifico.variable} ${lobster.variable} ${ebGaramond.variable} antialiased relative`}
+        className={`${interSans.variable} ${interTight.variable} ${leckerliOne.variable} ${libreCaslon.variable} ${libreBodoni.variable} ${pacifico.variable} ${lobster.variable} ${ebGaramond.variable} antialiased relative`}
       >
         {/* Header Component */}
         <Header />
@@ -174,7 +174,7 @@ export default function RootLayout({
         {/* Register Now button (Mobile only) */}
         <div className="sm:block md:hidden fixed left-4 top-1/2 -translate-y-2/3 z-50 -rotate-90 origin-left">
           <Link
-            href="/register"
+            href="/registernow"
             className="bg-[#D72327] text-white font-leckerli py-2 px-6 rounded-lg shadow-lg hover:bg-[#D72327] transition duration-300"
           >
             Register Now
