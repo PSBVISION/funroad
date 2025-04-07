@@ -152,7 +152,7 @@ const Page: React.FC = () => {
                               : "flex flex-col items-center justify-center yellowdialoguebox bg-center bg-no-repeat bg-contain md:h-110 md:w-84 w-100 h-74 mb-1"
                           }
                         >
-                          <h2 className="text-[#D72327] font-leckerli font-bold md:text-3xl group-hover:text-xl text-[19px] w-40  md:w-84 ">
+                          <h2 className="text-[#D72327] font-leckerli font-bold md:text-3xl group-hover:text-xl text-[17px] w-40  md:w-84 ">
                             {dialogue.title}
                           </h2>
 
@@ -172,7 +172,7 @@ const Page: React.FC = () => {
 
                           {/* Paragraph - Visible on Hover (Desktop) or Click (Mobile) */}
                           <p
-                            className={`font-inter text-[12px] text-justify w-40 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 ${
+                            className={`font-inter text-[10px] text-justify w-40 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 ${
                               openIndex === index ? "block" : "hidden"
                             }  group-hover:block`}
                           >
@@ -186,15 +186,15 @@ const Page: React.FC = () => {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="bg-[#ECCA19] text-[#2F3082] border-none hover:bg-amber-500 transition-colors absolute -left-[0.1%] top-[46%] md:top-[46%] md:-left-[4%]" />
-            <CarouselNext className="bg-[#ECCA19] text-[#2F3082] border-none hover:bg-amber-500 transition-colors absolute left-[90%] top-[46%] md:top-[46%] md:left-[100%]" />
+            <CarouselPrevious className="bg-[#ECCA19] text-[#2F3082] border-none hover:bg-amber-500 transition-colors absolute left-[5%] top-[46%] md:top-[46%] md:-left-[4%]" />
+            <CarouselNext className="bg-[#ECCA19] text-[#2F3082] border-none hover:bg-amber-500 transition-colors absolute left-[84%] top-[46%] md:top-[46%] md:left-[100%]" />
           </Carousel>
         </div>
       </section>
 
       {/* Parallel Sessions Section */}
       <section className="relative">
-        <div className="relative md:h-111 h-80 md:mb-45">
+        <div className="relative md:h-111 h-76 md:mb-45">
           <div className="w-full absolute top-0 left-0 paralleltree bg-contain md:bg-cover bg-center bg-no-repeat md:h-175 h-115">
             <h1 className="font-leckerli font-bold text-2xl md:mt-22 md:m-0 md:text-5xl lg:text-6xl text-[#D72327] text-center">
               Parallel Sessions
@@ -260,7 +260,7 @@ const Page: React.FC = () => {
                           </button>
 
                           <p
-                            className={`font-inter text-[12px] text-justify w-65 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 
+                            className={`font-inter text-[10px] text-justify w-65 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 
     ${openIndex === index ? "block" : "hidden"} group-hover:block`}
                           >
                             {dialogue.paragraph}

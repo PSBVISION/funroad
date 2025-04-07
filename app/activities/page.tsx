@@ -4,7 +4,6 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
-
 const Page = () => {
   const fadeIn = {
     hidden: { opacity: 0 },

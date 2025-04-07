@@ -604,6 +604,7 @@ import { motion } from "framer-motion";
 import { ministers } from "@/data/ministers";
 import { odeiaspeakers } from "@/data/ministers";
 import { publishers } from "@/data/ministers";
+import Footer from "@/components/Footer";
 
 const Page = () => {
   const fadeIn = {
@@ -662,17 +663,17 @@ const Page = () => {
           alt="Festival logo"
           width={67}
           height={67}
-          className="object-cover w-20 "
+          className="object-contain w-20 "
         />
       </motion.div>
-      <div className="w-full md:h-[320px] h-[120px] bg-auto overflow fixed  z-10">
+      <div className="w-full md:h-[320px] h-[120px] bg-auto overflow fixed  -z-10">
         {/* Left Decorative Image */}
         <Image
           src="/aboutus/wierdanimal.png"
           alt="Left decoration"
           width={390}
           height={520}
-          className="absolute left-[-0rem] bottom-[-8rem] md:bottom-[-10rem] w-32 md:w-96 z-30"
+          className="absolute left-[-2rem] bottom-[-9rem] md:bottom-[-10rem] w-32 md:w-96 z-30"
         />
 
         {/* Right Decorative Image (Flipped) */}
@@ -681,7 +682,7 @@ const Page = () => {
           alt="Right decoration"
           width={390}
           height={520}
-          className="absolute right-[-0rem] bottom-[-8rem] md:bottom-[-10rem] w-32 md:w-96 scale-x-[-1] z-20"
+          className="absolute right-[-2rem] bottom-[-9rem] md:bottom-[-10rem] w-32 md:w-96 scale-x-[-1] -z-20"
         />
       </div>
       <h1 className="font-leckerli font-bold text-4xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 justify-center flex mt-12">
@@ -758,6 +759,7 @@ const Page = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

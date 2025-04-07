@@ -245,7 +245,7 @@ function Hero() {
           alt="Festival logo"
           width={80}
           height={52}
-          className="object-cover full"
+          className="object-contain full"
         />
       </div>
       <div className="md:hidden block">

@@ -87,7 +87,7 @@ const page = () => {
       </div>
 
       {/* Mustard Background Section - Fixed */}
-      <div className="relative w-full min-h-130 md:min-h-[120vh] lg:min-h-260 flex md:items-center justify-center overflow-hidden mt-96 md:mt-60">
+      <div className="relative w-full min-h-130 md:min-h-[120vh] lg:min-h-260 flex md:items-center justify-center overflow-hidden mt-80 md:mt-60">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/mustardbg.svg"
@@ -170,7 +170,7 @@ const page = () => {
         />
       </div>
       {/* Voilet */}
-      <div className="relative w-full min-h-[70vh] md:min-h-[120vh] lg:min-h-275 flex items-center justify-center overflow-hidden ">
+      <div className="relative w-full min-h-[90vh] md:min-h-[120vh] lg:min-h-275 flex items-center justify-center overflow-hidden ">
         <div className="absolute inset-0 z-0 h-[70vh] md:h-full w-full hidden md:block">
           <Image
             src="/programs/voiletbg.svg"
@@ -273,7 +273,7 @@ const page = () => {
         />
       </div>
       {/* pinkdiv */}
-      <div className="relative w-full min-h-[70vh] md:min-h-[120vh] lg:min-h-263 flex items-center justify-center overflow-hidden md:mt-20 z-20">
+      <div className="relative w-full min-h-[90vh] md:min-h-[120vh] lg:min-h-263 flex items-center justify-center overflow-hidden md:mt-20 z-20">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/pinkbg.svg"
@@ -354,7 +354,7 @@ const page = () => {
         />
       </div>
       {/* blue div */}
-      <div className="relative w-full min-h-[80vh] md:min-h-[120vh] lg:min-h-264 flex items-center justify-center overflow-hidden md:mt-18  z-30">
+      <div className="relative w-full min-h-[90vh] md:min-h-[120vh] lg:min-h-264 flex items-center justify-center overflow-hidden md:mt-18  z-30">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/blue.svg"
@@ -436,7 +436,7 @@ const page = () => {
         />
       </div>
       {/* orange */}
-      <div className="relative w-full min-h-[80vh] md:min-h-[120vh] lg:min-h-270 flex items-center justify-center overflow-hidden md:mt-20 z-30">
+      <div className="relative w-full min-h-[110vh] md:min-h-[120vh] lg:min-h-270 flex items-center justify-center overflow-hidden md:mt-20 z-30">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/orange.svg"
@@ -521,7 +521,7 @@ const page = () => {
         />
       </div>
       {/* greensection */}
-      <div className="relative w-full min-h-[70vh] md:min-h-[120vh] lg:min-h-[150vh] flex items-center justify-center overflow-hidden md:my-15 z-40">
+      <div className="relative w-full min-h-[90vh] md:min-h-[120vh] lg:min-h-[150vh] flex items-center justify-center overflow-hidden md:my-15 z-40">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
