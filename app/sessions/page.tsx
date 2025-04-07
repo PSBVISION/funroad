@@ -105,7 +105,7 @@ const Page: React.FC = () => {
 
       {/* Sessions Section */}
       <section className="text-center h-[90vh] md:h-auto">
-        <h1 className="font-leckerli font-bold text-2xl md:text-4xl lg:text-5xl text-[#D72327] pt-5 md:pt-5">
+        <h1 className="font-leckerli font-bold text-2xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-5">
           Dialogue Sessions
         </h1>
 
@@ -121,20 +121,20 @@ const Page: React.FC = () => {
         </div>
 
         {/* Sessions Carousel */}
-        <div className="session-slider-bg bg-center bg-cover bg-no-repeat h-100 md:h-270 w-full flex items-center justify-center relative -top-40 overflow-hidden mt-23 md:m-0">
+        <div className="session-slider-bg bg-center bg-cover bg-no-repeat h-120 md:h-270 w-full flex items-center justify-center relative -top-40 overflow-hidden mt-23 md:m-0">
           <Carousel
             opts={{
               align: "center",
               loop: true,
             }}
-            className="max-w-[380px] md:max-w-7xl"
+            className="max-w-[420px] md:max-w-7xl"
             setApi={(api) => setEmblaRef(api || null)}
           >
             <CarouselContent>
               {sessionsData.dialogues.map((dialogue, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-1/2 md:basis-1/2 lg:basis-1/3 text-center relative"
+                  className="basis-2/3 md:basis-1/2 lg:basis-1/3 text-center relative"
                 >
                   <div className="p-1">
                     <Card
@@ -144,19 +144,19 @@ const Page: React.FC = () => {
                           : "transition-all"
                       }
                     >
-                      <CardContent className="flex items-center justify-center md:h-110 md:w-94 w-50 h-80 bluedialoguebox bg-center bg-no-repeat bg-contain relative">
+                      <CardContent className="flex items-center justify-center md:h-110 md:w-94 w-70 h-90 bluedialoguebox bg-center bg-no-repeat bg-contain relative">
                         <div
                           className={
                             index === dialogueActiveIndex
-                              ? "flex flex-col items-center justify-center yellowdialoguebox bg-center bg-no-repeat bg-contain md:h-110 md:w-84 w-100 h-58 hover:-rotate-10 hover:scale-110 transition-all duration-500 ease-in-out group mb-1"
-                              : "flex flex-col items-center justify-center yellowdialoguebox bg-center bg-no-repeat bg-contain md:h-110 md:w-84 w-100 h-58 mb-1"
+                              ? "flex flex-col items-center justify-center yellowdialoguebox bg-center bg-no-repeat bg-contain md:h-110 md:w-84 w-100 h-78 hover:-rotate-10 hover:scale-110 transition-all duration-500 ease-in-out group mb-1"
+                              : "flex flex-col items-center justify-center yellowdialoguebox bg-center bg-no-repeat bg-contain md:h-110 md:w-84 w-100 h-74 mb-1"
                           }
                         >
-                          <h2 className="text-[#D72327] font-leckerli font-bold md:text-3xl group-hover:text-xl text-[11px] w-33  md:w-84 ">
+                          <h2 className="text-[#D72327] font-leckerli font-bold md:text-3xl group-hover:text-xl text-[19px] w-40  md:w-84 ">
                             {dialogue.title}
                           </h2>
 
-                          <h3 className="text-blue-800 font-leckerli md:text-xl group-hover:text-md md:w-55 w-23 text-xs">
+                          <h3 className="text-blue-800 font-leckerli md:text-xl group-hover:text-md md:w-55 w-40 text-sm">
                             {dialogue.subtitle}
                           </h3>
 
@@ -172,7 +172,7 @@ const Page: React.FC = () => {
 
                           {/* Paragraph - Visible on Hover (Desktop) or Click (Mobile) */}
                           <p
-                            className={`font-inter text-[10px] text-justify w-33 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 ${
+                            className={`font-inter text-[12px] text-justify w-40 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 ${
                               openIndex === index ? "block" : "hidden"
                             }  group-hover:block`}
                           >
@@ -215,7 +215,7 @@ const Page: React.FC = () => {
               {sessionsData.paralellDialogues.map((dialogue, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-1/2 md:basis-1/2 lg:basis-1/3 text-center relative"
+                  className="basis-2/3 md:basis-1/2 lg:basis-1/3 text-center relative"
                 >
                   <div className="p-1">
                     <Card
@@ -225,7 +225,7 @@ const Page: React.FC = () => {
                           : "transition-all"
                       }
                     >
-                      <CardContent className="flex items-center justify-center md:h-100 md:w-135 w-90 h-80 redparallel bg-center bg-no-repeat bg-contain relative">
+                      <CardContent className="flex items-center justify-center md:h-100 md:w-135 w-110 h-80 redparallel bg-center bg-no-repeat bg-contain relative">
                         {/* <div className="absolute -top-4 rounded-full bg-[#D72327] z-50 h-15 w-15 font-leckerli text-[#2F3082] text-3xl text-center py-2">
                           {dialogue.id + 1}
                         </div> */}
@@ -236,26 +236,32 @@ const Page: React.FC = () => {
                               : "flex flex-col items-center  justify-center yellowparallel bg-center bg-no-repeat bg-contain md:h-110 md:w-120 w-100 h-58 mb-1"
                           }
                         >
-                          <h2 className="text-[#D72327] font-leckerli font-bold md:text-3xl group-hover:text-xl text-lg">
+                          <h2
+                            className={`text-[#D72327] font-leckerli font-bold md:text-3xl group-hover:text-xl text-lg 
+    ${openIndex === index ? "hidden md:block" : ""}`}
+                          >
                             {dialogue.title}
                           </h2>
-                          <h3 className="text-blue-800 font-leckerli md:text-xl group-hover:text-md md:w-55 w-40 text-lg ">
+
+                          <h3
+                            className={`text-blue-800 font-leckerli md:text-xl group-hover:text-md md:w-55 w-70 text-lg 
+    ${openIndex === index ? "hidden md:block" : ""}`}
+                          >
                             {dialogue.subtitle}
                           </h3>
+
                           <button
                             onClick={() =>
                               setOpenIndex(openIndex === index ? null : index)
                             }
-                            className="md:hidden mt-2  text-blue-900 underline text-xs"
+                            className="md:hidden mt-2 text-red-900 underline text-[12px]"
                           >
                             {openIndex === index ? "Show Less" : "Know More"}
                           </button>
 
-                          {/* Paragraph - Visible on Hover (Desktop) or Click (Mobile) */}
                           <p
-                            className={`font-inter text-[9px] text-justify w-60 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 ${
-                              openIndex === index ? "block" : "hidden"
-                            }  group-hover:block`}
+                            className={`font-inter text-[12px] text-justify w-65 md:text-sm md:w-65 transition-opacity ease-in-out font-ebGaramond duration-500 
+    ${openIndex === index ? "block" : "hidden"} group-hover:block`}
                           >
                             {dialogue.paragraph}
                           </p>

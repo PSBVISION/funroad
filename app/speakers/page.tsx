@@ -665,12 +665,31 @@ const Page = () => {
           className="object-cover w-20 "
         />
       </motion.div>
+      <div className="w-full md:h-[320px] h-[120px] bg-auto overflow fixed  z-10">
+        {/* Left Decorative Image */}
+        <Image
+          src="/aboutus/wierdanimal.png"
+          alt="Left decoration"
+          width={390}
+          height={520}
+          className="absolute left-[-0rem] bottom-[-8rem] md:bottom-[-10rem] w-32 md:w-96 z-30"
+        />
+
+        {/* Right Decorative Image (Flipped) */}
+        <Image
+          src="/aboutus/wierdanimal.png"
+          alt="Right decoration"
+          width={390}
+          height={520}
+          className="absolute right-[-0rem] bottom-[-8rem] md:bottom-[-10rem] w-32 md:w-96 scale-x-[-1] z-20"
+        />
+      </div>
       <h1 className="font-leckerli font-bold text-4xl md:text-4xl lg:text-4xl text-[#D72327] pt-5 md:pt-4 justify-center flex mt-12">
         Meet The Speakers
       </h1>
       {/* Ministers Grid - Responsive */}
       <div className="container mx-auto  py-10 items-center justify-center flex ">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6  md:gap-0 mx-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6  md:gap-0 mx-4">
           {ministers.map((minister, index) => (
             <div key={index} className="relative flex flex-col items-center">
               {/* Red Background Circle */}
@@ -695,7 +714,7 @@ const Page = () => {
       </h1>
 
       <div className="container mx-auto md:px-0 py-10 flex justify-center ">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6  md:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6  md:gap-6">
           {odeiaspeakers.map((odeiaspeakers, index) => (
             <div key={index} className="relative flex flex-col items-center">
               {/* Red Background Circle */}
@@ -720,7 +739,7 @@ const Page = () => {
       </h1>
 
       <div className="container mx-auto md:px-0 py-10  justify-center flex">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6  md:gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6  md:gap-0">
           {publishers.map((publishers, index) => (
             <div key={index} className="relative flex flex-col items-center">
               {/* Red Background Circle */}

@@ -42,18 +42,18 @@ const page = () => {
         <h1 className="font-leckerli text-xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl text-[#D72327] text-center mt-2 md:mt-3 lg:mt-10">
           A Celebration of
         </h1>
-        <h1 className="font-leckerli text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-[#ECCA19] text-center md:mt-1">
+        <h1 className="font-leckerli text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl text-[#ECCA19] text-center md:mt-1 ">
           Heritage & Culture
         </h1>
 
         {/* Responsive Image */}
-        <div className="w-full flex justify-start mt-23 md:hidden absolute -left-5 ">
+        <div className="w-full flex justify-center mt-16  md:hidden absolute">
           <Image
             src="/programs/programstemple2.png"
             alt="Festival logo"
-            width={127}
-            height={52}
-            className="object-contain w-[100%] max-w-[430px]"
+            width={200}
+            height={80}
+            className="object-contain w-120 h-auto"
           />
         </div>
 
@@ -63,7 +63,7 @@ const page = () => {
             alt="Festival logo"
             width={227}
             height={100}
-            className="object-contain w-[90%] max-w-lg md:max-w-xl lg:max-w-2xl absolute -left-20 -bottom-126"
+            className="object-contain w-[90%] max-w-lg md:max-w-lg lg:max-w-lg absolute -left-4 -bottom-106"
           />
         </div>
         <div className="absolute -bottom-95 right-12 -z-20 hidden md:block ">
@@ -87,7 +87,7 @@ const page = () => {
       </div>
 
       {/* Mustard Background Section - Fixed */}
-      <div className="relative w-full min-h-120 md:min-h-[120vh] lg:min-h-260 flex md:items-center justify-center overflow-hidden mt-65 md:mt-60">
+      <div className="relative w-full min-h-130 md:min-h-[120vh] lg:min-h-260 flex md:items-center justify-center overflow-hidden mt-96 md:mt-60">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/mustardbg.svg"
@@ -156,7 +156,7 @@ const page = () => {
             alt="Decorative Line"
             width={357}
             height={52}
-            className="w-26 sm:w-1/2 md:w-[357px] rounded-lg"
+            className="w-34 sm:w-1/2 md:w-[357px] rounded-lg"
           />
         </div>
       </div>
@@ -166,11 +166,11 @@ const page = () => {
           alt="Decorative Line"
           width={357}
           height={52}
-          className="absolute md:-top-62 -top-24 -left-8 z-20 w-50 md:w-xl rotate-10"
+          className="absolute md:-top-62 -top-24 md:-left-8  z-20 w-56 md:w-xl rotate-10"
         />
       </div>
       {/* Voilet */}
-      <div className="relative w-full min-h-[100vh] md:min-h-[120vh] lg:min-h-265 flex items-center justify-center overflow-hidden ">
+      <div className="relative w-full min-h-[70vh] md:min-h-[120vh] lg:min-h-275 flex items-center justify-center overflow-hidden ">
         <div className="absolute inset-0 z-0 h-[70vh] md:h-full w-full hidden md:block">
           <Image
             src="/programs/voiletbg.svg"
@@ -183,7 +183,7 @@ const page = () => {
             className="w-full h-full"
           />
         </div>
-        <div className="absolute inset-0 z-0 md:h-120  h-150  w-full md:hidden">
+        <div className="absolute inset-0 z-0 md:h-120  h-160  w-full md:hidden">
           <Image
             src="/programs/mobilevoiletbg.svg"
             alt="Yellow Background"
@@ -196,8 +196,8 @@ const page = () => {
           />
         </div>
         {/* Your content goes here */}
-        <div className=" z-10 flex flex-col md:flex-row items-center md:items-center w-[400px] md:w-[80%] lg:w-[95%] md:px-20 md:gap-38 gap-0 px-10 ">
-          <h1 className="text-sm md:text-5xl font-bold text-white  font-ebGaramond absolute mt-0 md:mb-0   md:hidden ">
+        <div className=" z-10 flex flex-col md:flex-row items-center  md:items-center w-[400px] md:w-[80%] lg:w-[95%] md:px-20 md:gap-38 gap-0 px-10 ">
+          <h1 className="text-sm md:text-5xl font-bold text-white  font-ebGaramond absolute mt-0 md:mb-0 mb-20   md:hidden ">
             Cultural Night
           </h1>
           <h2 className="text-xs md:text-4xl text-[#9F6EEA] italic  font-ebGaramond absolute mt-5 md:mb-0   md:hidden ">
@@ -205,7 +205,7 @@ const page = () => {
           </h2>
           {/* Left Section - Text */}
 
-          <div className="flex justify-center mt-12  md:hidden md:mb-0 mb-16">
+          <div className="flex justify-center md:mt-12 mt-12  md:hidden md:mb-0 mb-16">
             <Image
               src="/programs/culturalnight.png"
               alt="Decorative Line"
@@ -273,7 +273,7 @@ const page = () => {
         />
       </div>
       {/* pinkdiv */}
-      <div className="relative w-full min-h-[100vh] md:min-h-[120vh] lg:min-h-263 flex items-center justify-center overflow-hidden md:mt-20 z-20">
+      <div className="relative w-full min-h-[70vh] md:min-h-[120vh] lg:min-h-263 flex items-center justify-center overflow-hidden md:mt-20 z-20">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/pinkbg.svg"
@@ -286,7 +286,7 @@ const page = () => {
             className="w-full h-full"
           />
         </div>
-        <div className="absolute inset-0 z-0 md:h-120  h-130  w-full md:hidden">
+        <div className="absolute inset-0 z-0 md:h-120  h-150  w-full md:hidden">
           <Image
             src="/programs/mobilepinkbg.svg"
             alt="Yellow Background"
@@ -354,7 +354,7 @@ const page = () => {
         />
       </div>
       {/* blue div */}
-      <div className="relative w-full min-h-[100vh] md:min-h-[120vh] lg:min-h-264 flex items-center justify-center overflow-hidden md:mt-18  z-30">
+      <div className="relative w-full min-h-[80vh] md:min-h-[120vh] lg:min-h-264 flex items-center justify-center overflow-hidden md:mt-18  z-30">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/blue.svg"
@@ -367,7 +367,7 @@ const page = () => {
             className="w-full h-full"
           />
         </div>
-        <div className="absolute inset-0 z-0 md:h-120  h-135  w-full md:hidden">
+        <div className="absolute inset-0 z-0 md:h-120  h-155  w-full md:hidden">
           <Image
             src="/programs/mobilebluebg.svg"
             alt="Yellow Background"
@@ -436,7 +436,7 @@ const page = () => {
         />
       </div>
       {/* orange */}
-      <div className="relative w-full min-h-[90vh] md:min-h-[120vh] lg:min-h-270 flex items-center justify-center overflow-hidden md:mt-20 z-30">
+      <div className="relative w-full min-h-[80vh] md:min-h-[120vh] lg:min-h-270 flex items-center justify-center overflow-hidden md:mt-20 z-30">
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
             src="/programs/orange.svg"
@@ -449,7 +449,7 @@ const page = () => {
             className="w-full h-full"
           />
         </div>
-        <div className="absolute inset-0 z-0 md:h-120  h-130  w-full md:hidden">
+        <div className="absolute inset-0 z-0 md:h-120  h-170  w-full md:hidden">
           <Image
             src="/programs/mobileorangebg.svg"
             alt="Yellow Background"
@@ -521,7 +521,7 @@ const page = () => {
         />
       </div>
       {/* greensection */}
-      <div className="relative w-full min-h-[90vh] md:min-h-[120vh] lg:min-h-[150vh] flex items-center justify-center overflow-hidden md:my-15 z-40">
+      <div className="relative w-full min-h-[70vh] md:min-h-[120vh] lg:min-h-[150vh] flex items-center justify-center overflow-hidden md:my-15 z-40">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
           <Image
@@ -535,7 +535,7 @@ const page = () => {
             className="w-full h-full"
           />
         </div>
-        <div className="absolute inset-0 z-0 md:h-120  h-130  w-full md:hidden">
+        <div className="absolute inset-0 z-0 md:h-120  h-150  w-full md:hidden">
           <Image
             src="/programs/mobilegreenbg.svg"
             alt="Yellow Background"

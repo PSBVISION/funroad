@@ -312,12 +312,9 @@ export default function Page() {
                   />
                 </Link>
               </motion.li>
-              
             </ul>
           </div>
         </motion.div>
-
-
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -327,12 +324,10 @@ export default function Page() {
           className="w-full max-w-2xl md:pb-0 pb-6"
         >
           <h1 className="font-libreBodoni font-medium text-lg sm:text-2xl text-center pb-3 md:pb-10 ">
-           Socail Media Partners
+            Socail Media Partners
           </h1>
           <div className="mb-10 sm:mb-16 md:mb-20 md:mt-4 mt-6">
             <ul className="grid grid-cols-2 sm:grid-cols-2  items-center justify-items-center">
-            
-            
               <motion.li
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -343,7 +338,7 @@ export default function Page() {
                   <Image
                     src="/partners/dottly.png"
                     alt="Prameya logo"
-                    width={150}
+                    width={110}
                     height={150}
                   />
                 </Link>
@@ -358,7 +353,7 @@ export default function Page() {
                   <Image
                     src="/partners/OS.png"
                     alt="Prameya logo"
-                    width={110}
+                    width={90}
                     height={150}
                   />
                 </Link>

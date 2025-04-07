@@ -91,7 +91,7 @@ const Page = () => {
         viewport={{ once: true }}
         variants={fadeIn}
       >
-        <p className="text-[10px] md:text-xl lg:text-xl xl:text-xl  mt-10 md:mt-8 lg:mt-8 mb-10 lg:mb-20 md:mx-60 w-7/9 mx-auto font-ebGaramond text-justify">
+        <p className="text-[10px] md:text-xl lg:text-xl xl:text-xl  mt-10 md:mt-8 lg:mt-8 mb-10 lg:mb-20 md:mx-60 w-6/9 mx-auto font-ebGaramond text-justify">
           <span className="font-bold">The Puri Literary Festival 2025</span> is
           dedicated to creating an inclusive and accessible environment where
           people from all{" "}
@@ -494,7 +494,7 @@ const Page = () => {
 
       {/* Download brochure */}
       <motion.div
-        className="relative w-full md:h-[25vh] h-[40vh] flex items-end justify-center"
+        className="relative w-full md:h-[25vh] h-[20vh] flex items-end justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

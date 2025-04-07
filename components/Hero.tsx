@@ -241,9 +241,9 @@ function Hero() {
       {/* Mobile View */}
       <div className="  md:hidden hero-bg-mobile bg-center bg-cover bg-no-repeat h-[21vh] w-full flex justify-center items-center">
         <Image
-          src="/centermobilelogo.png"
+          src="/mobilecenterlogo2.svg"
           alt="Festival logo"
-          width={67}
+          width={80}
           height={52}
           className="object-cover full"
         />
@@ -252,6 +252,14 @@ function Hero() {
         <h1 className="text-center font-libreBodoni text-[#D72327] md:text-sm lg:text-lg">
           18th APRIL - 20th APRIL 2025
         </h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-center text-4xl font-ebGaramond md:text-sm lg:text-2lg xl:text-4xl 2xl:text-6xl text-[#B9975A]  mb-2 "
+        >
+          TAJ
+        </motion.h1>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -270,7 +278,7 @@ function Hero() {
           className="object-contain mx-auto -my-5 size-25 xl:size-42"
         /> */}
 
-        <p className="text-center font-libreBodoni text-xl py-8 text-[#D72327] w-3/4 mx-auto">
+        <p className="text-center font-libreBodoni text-xl py-4 text-[#D72327] w-3/4 mx-auto">
           <span className="text-[#2F3082]">Weaving Stories of</span>
           <span className="text-[#D72327]">
             <br />

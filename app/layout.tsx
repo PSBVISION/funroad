@@ -172,7 +172,7 @@ export default function RootLayout({
         {children}
 
         {/* Register Now button (Mobile only) */}
-        <div className="sm:block md:hidden fixed left-4 top-1/2 -translate-y-1/2 z-50 -rotate-90 origin-left">
+        <div className="sm:block md:hidden fixed left-4 top-1/2 -translate-y-2/3 z-50 -rotate-90 origin-left">
           <Link
             href="/register"
             className="bg-[#D72327] text-white font-leckerli py-2 px-6 rounded-lg shadow-lg hover:bg-[#D72327] transition duration-300"

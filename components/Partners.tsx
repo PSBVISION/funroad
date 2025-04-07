@@ -127,13 +127,13 @@ const partnerLogos = [
   },
   {
     src: "/partners/dottly.png",
-    width: 140,
+    width: 120,
     height: 85,
     link: "https://www.celsius.com/",
   },
   {
     src: "/partners/OS.png",
-    width: 140,
+    width: 120,
     height: 85,
     link: "https://www.celsius.com/",
   },
