@@ -239,7 +239,7 @@ function Hero() {
       </div>
       <div className=" hero-temple-img bg-center bg-cover bg-no-repeat h-[95vh] hidden md:block mt-12 "></div>
       {/* Mobile View */}
-      {/* <div className="  md:hidden hero-bg-mobile bg-center bg-cover bg-no-repeat h-[21vh] w-full flex justify-center items-center">
+      <div className="  md:hidden hero-bg-mobile bg-center bg-cover bg-no-repeat h-[21vh] w-full flex justify-center items-center">
         <Image
           src="/mobilecenterlogo2.svg"
           alt="Festival logo"
@@ -247,8 +247,8 @@ function Hero() {
           height={52}
           className="object-contain full"
         />
-      </div> */}
-      <div className="md:hidden hero-bg-mobile bg-center bg-cover bg-no-repeat h-[21vh] w-full flex justify-center items-center">
+      </div>
+      {/* <div className="md:hidden hero-bg-mobile bg-center bg-cover bg-no-repeat h-[21vh] w-full flex justify-center items-center">
   <Image
     src="/mobilecenterlogo2.svg"
     alt="Festival logo"
@@ -257,7 +257,7 @@ function Hero() {
     className="object-contain w-[80px] h-[124px]"
     priority // Loads early and crisp
   />
-</div>
+</div> */}
 
       <div className="md:hidden block">
         <h1 className="text-center font-libreBodoni text-[#D72327] md:text-sm lg:text-lg">

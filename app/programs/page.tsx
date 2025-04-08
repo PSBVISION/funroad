@@ -64,7 +64,7 @@ const page = () => {
             alt="Festival logo"
             width={227}
             height={100}
-            className="object-contain w-[230px] max-w-lg md:max-w-lg lg:max-w-lg absolute -left-4 md:-bottom-106"
+            className="object-contain w-[230px] max-w-lg md:w-[480px] lg:w-[500px] absolute -left-4 md:-bottom-106"
           />
         </div>
         <div className="absolute md:-bottom-95  -bottom-64 right-12 -z-20 ">

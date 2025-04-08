@@ -15,7 +15,7 @@ const Page = () => {
     {
       name: "Omm Priyadarshi",
       surname: "Chotaray",
-      image: "/aboutus/ompriyadarshi.png",
+      image: "/aboutus/ompriyadarshni2.png",
       about1: (
         <>
           Traversing across all states and more than
@@ -50,7 +50,7 @@ const Page = () => {
     {
       name: "Shivam",
       surname: "Raghuwanshi",
-      image: "/aboutus/sheshankshekhar.png",
+      image: "/aboutus/shashank2.png",
       about1: (
         <>
           Shashank Shekhar Singh is at the forefront of transformative thinking
@@ -78,7 +78,7 @@ const Page = () => {
     {
       name: "shivamraghuwanshi ",
       surname: "shivamraghuwanshi",
-      image: "/aboutus/shivamraghuwanshi.png",
+      image: "/aboutus/shivam.png",
       about1:
         "A lawyer advocating for the right causes at the Supreme Court of India, Shivam Raghuwanshi has risen to prominence through his exceptional academic and professional achievements despite his humble background.",
       about2: (
@@ -529,7 +529,7 @@ const Page = () => {
           className="
         absolute 
         right-0 
-        -bottom-15 sm:-bottom-7 md:-bottom-10  
+        -bottom-18 sm:-bottom-7 md:-bottom-10  
         w-35 sm:w-32 md:w-40 lg:w-88 
         h-auto 
         scale-x-[-1]
@@ -537,29 +537,29 @@ const Page = () => {
         "
         />
       </motion.div>
-      <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden md:z-60">
+      <div className="relative w-full h-[1400px] md:h-auto md:min-h-screen flex md:items-center justify-center overflow-hidden md:z-60">
         {/* Background Images */}
         <Image
           src="/aboutus/bluebg.png"
           alt="Background"
           layout="fill"
-          objectFit="conrain"
+          objectFit=""
           className="hidden md:block absolute inset-0 -z-10"
           priority
         />
         <Image
           src="/mobilefoundingbg2.svg"
           alt="Mobile Background"
-          width={200}
-          height={200}
-          className="block md:hidden absolute inset-0 -z-10 w-full h-full object-cover"
+          width={400}
+          height={400}
+          className="block md:hidden absolute inset-0 -z-10 w-full h-[1200px] object-cover"
           priority
         />
 
         {/* Main Content */}
-        <div className="relative w-full max-w-7xl px-4 sm:px-6 lg:px-12 py-15 md:py-20 flex flex-col items-center">
+        <div className=" md:flex hidden relative w-full max-w-7xl px-4 sm:px-6 lg:px-12 py-5 md:py-20  flex-col items-center">
           {/* Title */}
-          <div className="mb-24 md:mb-0 md:mt-15">
+          <div className="mb-24 md:mb-0 md:mt-15 ">
             <div className="flex justify-center items-center gap-2 mb-10 md:mt-25">
               <Image
                 src="/shank.svg"
@@ -582,26 +582,26 @@ const Page = () => {
             </div>
           </div>
           {/* Director Cards */}
-          <div className="flex flex-col w-full px-5 space-y-5 md:space-y-20">
+          <div className="flex flex-col w-[1100px] px-5 space-y-5 md:space-y-10">
             {directors.map((director, index) => (
               <motion.div
                 key={index}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className={`flex flex-row items-center justify-between gap-8 md:gap-16 ${
+                className={`flex flex-row items-center justify-between gap-8 md:gap-13  ${
                   index % 2 === 1 ? "flex-row-reverse" : ""
                 }`}
               >
                 {/* Image */}
-                <div className="w-[30%] md:w-[40%] relative aspect-[3/4] max-w-[400px]">
+                <div className="w-[30%] md:w-[40%] relative aspect-[3/4] max-w-[300px]">
                   <Link href={director.link}>
                     <Image
                       src={director.image}
                       alt={`${director.name} ${director.surname}`}
                       layout="fill"
                       objectFit="contain"
-                      className="rounded-xl"
+                      className="l"
                     />
                   </Link>
                 </div>
@@ -626,13 +626,64 @@ const Page = () => {
           />
         </div>
 
+        {/* Mobile Main Content */}
+        <div className=" md:hidden ">
+          {/* Title */}
+          <div className="md:mb-0 md:mt-15  mt-15">
+            <div className="flex justify-center items-center gap-2 mb-10 md:mt-25">
+              <Image
+                src="/shank.svg"
+                alt="Decorative element"
+                width={60}
+                height={150}
+                className="w-8 sm:w-10 md:w-12 lg:w-16"
+              />
+              <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-[#D72327] font-leckerli">
+                Founding
+                <br /> Directors
+              </h1>
+              <Image
+                src="/shank.svg"
+                alt="Decorative element"
+                width={60}
+                height={150}
+                className="w-8 sm:w-10 md:w-12 lg:w-16 scale-x-[-1]"
+              />
+            </div>
+            <div className=" text-white sm:hidden">
+              {directors.map((director, index) => (
+                <div key={index} className="flex flex-col items-center pt-3">
+                  <div className="  w-[180px] h-[150px] relative">
+                    <Image
+                      src={director.image}
+                      alt={director.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+
+                  <p className="mt-2 text-[9px] text-justify px-12">
+                    {director.about1}
+                  </p>
+                  <p className="mt-2 text-[9px] text-justify  px-12">
+                    {director.about2}
+                  </p>
+                  <p className="mt-2 text-[9px] text-justify  px-12">
+                    {director.about3}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Red Bar */}
-        <div className="bg-[#D72327] absolute bottom-0 w-full h-40 -z-30"></div>
+        <div className="bg-[#D72327] absolute bottom-0 w-full h-50 -z-24 md:h:40"></div>
       </div>
 
-      <div className="relative bg-[#D72327] min-h-screen overflow-hidden w-full">
+      <div className="relative bg-[#D72327] h-[620px] md:min-h-screen md:h-auto overflow-hidden w-full">
         {/* Header with Shanks and Title */}
-        <div className="flex justify-center items-center gap-2 mb-8 pt-12">
+        <div className="flex justify-center items-center gap-2 mb-8 md:pt-12 ">
           <Image
             src="/shank.svg"
             alt="Decorative element"
@@ -668,43 +719,90 @@ const Page = () => {
         />
 
         {/* Grid Section */}
-        <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-45 pt-12 mx-auto">
-          {team.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
-              {team.map((member, index) => (
-                <motion.div
-                  key={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className="flex justify-center w-full"
-                >
-                  <Link
-                    href={member.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full max-w-[260px]"
-                  >
-                    <div className="relative w-[260px] aspect-square md:w-[300px] md:h-[350px] overflow-hidden">
-                      <Image
-                        src={member.image}
-                        alt={`${member.name} ${member.surname}`}
-                        layout="fill"
-                        objectFit="contain"
-                        className="rounded-xl hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
+        <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-45 md:pt-12 mx-auto">
+  {team.length > 0 && (
+    <>
+      {/* Mobile Layout (max-sm only) */}
+      <div className="sm:hidden grid grid-cols-2 gap-4 justify-items-center">
+        {team.slice(0, 2).map((member, index) => (
+          <Link
+            key={index}
+            href={member.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full max-w-[260px]"
+          >
+            <div className="relative w-full aspect-square overflow-hidden">
+              <Image
+                src={member.image}
+                alt={`${member.name} ${member.surname}`}
+                layout="fill"
+                objectFit="contain"
+                className="rounded-xl hover:scale-105 transition-transform duration-300"
+              />
             </div>
-          )}
+          </Link>
+        ))}
+      </div>
+      {team[2] && (
+        <div className="sm:hidden flex justify-center mt-4">
+          <Link
+            href={team[2].instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full max-w-[160px]"
+          >
+            <div className="relative w-full aspect-square overflow-hidden">
+              <Image
+                src={team[2].image}
+                alt={`${team[2].name} ${team[2].surname}`}
+                layout="fill"
+                objectFit="contain"
+                className="rounded-xl hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </Link>
         </div>
+      )}
+
+      {/* Desktop & Tablet Layout (unchanged) */}
+      <div className="hidden sm:grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
+        {team.map((member, index) => (
+          <motion.div
+            key={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex justify-center w-full"
+          >
+            <Link
+              href={member.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full max-w-[260px]"
+            >
+              <div className="relative w-[260px] aspect-square md:w-[300px] md:h-[350px] overflow-hidden">
+                <Image
+                  src={member.image}
+                  alt={`${member.name} ${member.surname}`}
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-xl hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </>
+  )}
+</div>
+
       </div>
 
       {/* teams */}
 
-      <div className="relative w-full min-h-[210vh] md:min-h-[280vh] flex items-center justify-center overflow-hidden">
+      <div className="relative w-full h-[190vh]  md:h-auto md:min-h-[280vh] flex items-center justify-center overflow-hidden">
         <div className="bg-[#D72327] absolute top-0 w-full h-200 -z-30"></div>
         {/* Background Image - EDIT: Replace with your actual background image */}
         <Image
@@ -735,7 +833,7 @@ const Page = () => {
               height={150}
               className="w-8 sm:w-10 md:w-12 lg:w-16"
             />
-            <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-[#D72327] font-leckerli">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#D72327] font-leckerli">
               Team
             </h1>
             <Image
@@ -808,8 +906,8 @@ const Page = () => {
               </div>
             )}
           </div>
-          <div className="w-full max-w-[800px] mt-0 mb-45 md:hidden block">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+          <div className="w-full max-w-[900px]  md:hidden block">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-items-center">
               {team2.map((person, index) => {
                 const total = team2.length;
                 const itemsInLastRow = total % 3;
@@ -823,7 +921,7 @@ const Page = () => {
                 return (
                   <motion.div
                     key={index}
-                    className={`relative w-full max-w-[260px] aspect-square 
+                    className={`relative w-full max-w-[400px] aspect-square 
             ${isSingleItemLastRow ? "md:col-span-3 justify-self-center" : ""}
             ${isTwoItemLastRow ? "md:col-span-1" : ""}
           `}
@@ -841,7 +939,7 @@ const Page = () => {
                         alt={`${person.name} ${person.surname}`}
                         layout="fill"
                         objectFit="contain"
-                        className="rounded-xl hover:scale-105 transition-transform duration-300"
+                        className=" hover:scale-105 transition-transform duration-300"
                       />
                     </Link>
                   </motion.div>
@@ -926,7 +1024,7 @@ const Page = () => {
                           key={linkIndex}
                           className="sm:text-xs md:text-sm lg:text-lg text-[#FFFCF5] hover:text-yellow-300 transition-colors cursor-pointer"
                         >
-                          {link.href}
+                          {link.label}
                         </li>
                       ))}
                     </ul>
