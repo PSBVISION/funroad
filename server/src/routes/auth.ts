@@ -5,6 +5,15 @@ import { AuthedRequest, requireAuth } from "../middleware/requireAuth";
 
 export const authRouter = Router();
 
+function cookieOptions() {
+  const isProd = process.env.NODE_ENV === "production";
+  return {
+    httpOnly: true,
+    sameSite: isProd ? ("none" as const) : ("lax" as const),
+    secure: isProd,
+  };
+}
+
 authRouter.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body ?? {};
@@ -91,11 +100,7 @@ authRouter.post("/login", async (req, res) => {
 
     const token = signJwt({ userId: String(user._id) });
 
-    res.cookie(process.env.COOKIE_NAME!, token, {
-      httpOnly: true,
-      sameSite: "lax",
-      secure: false,
-    });
+    res.cookie(process.env.COOKIE_NAME!, token, cookieOptions());
 
     return res.json({
       ok: true,
@@ -117,11 +122,7 @@ authRouter.post("/login", async (req, res) => {
 
 authRouter.post("/logout", async (req, res) => {
   try {
-    res.clearCookie(process.env.COOKIE_NAME!, {
-      httpOnly: true,
-      sameSite: "lax",
-      secure: false,
-    });
+    res.clearCookie(process.env.COOKIE_NAME!, cookieOptions());
 
     return res.json({ ok: true });
   } catch (err) {
