@@ -187,7 +187,10 @@ creatorImportRouter.post(
         if (!url || typeof url !== "string") continue;
 
         try {
-          const inspected = await downloadAndInspectImage(url);
+          const inspected = await downloadAndInspectImage({
+            url,
+            sourcePageUrl,
+          });
 
           const uploadedToCloud = await uploadImageBufferToCloudinary({
             buffer: inspected?.buffer,
