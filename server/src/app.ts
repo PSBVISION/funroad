@@ -10,7 +10,7 @@ import { creatorSalesRouter } from "./routes/creatorSales.js";
 import { libraryRouter } from "./routes/library.js";
 
 const defaultAllowedOrigins = [
-  "https://funroad.vercel.app",
+  "https://funroad-tan.vercel.app",
   "https://funroad.psbvision.engineer",
 ];
 
