@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { AuthedRequest, requireAuth } from "../middleware/requireAuth";
+import { AuthedRequest, requireAuth } from "../middleware/requireAuth.js";
 import { Types } from "mongoose";
-import { Order } from "../models/Order";
-import { Product } from "../models/Product";
-import { User } from "../models/User";
+import { Order } from "../models/Order.js";
+import { Product } from "../models/Product.js";
+import { User } from "../models/User.js";
 
 export const creatorSalesRouter = Router();
 

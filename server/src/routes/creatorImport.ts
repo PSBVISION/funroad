@@ -1,15 +1,15 @@
 import { Router, Response } from "express";
-import { AuthedRequest, requireAuth } from "../middleware/requireAuth";
-import { Product } from "../models/Product";
+import { AuthedRequest, requireAuth } from "../middleware/requireAuth.js";
+import { Product } from "../models/Product.js";
 import {
   firecrawlSearch,
   getFirecrawl,
   PRODUCT_DESC_SCHEMA,
-} from "../lib/firecrawl";
-import { ImageAsset } from "../models/ImageAsset";
+} from "../lib/firecrawl.js";
+import { ImageAsset } from "../models/ImageAsset.js";
 import mongoose from "mongoose";
-import { downloadAndInspectImage } from "../lib/downloadImage";
-import { uploadImageBufferToCloudinary } from "../lib/cloudinary";
+import { downloadAndInspectImage } from "../lib/downloadImage.js";
+import { uploadImageBufferToCloudinary } from "../lib/cloudinary.js";
 
 export const creatorImportRouter = Router();
 creatorImportRouter.use(requireAuth);

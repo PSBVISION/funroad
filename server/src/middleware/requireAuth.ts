@@ -1,6 +1,6 @@
 import { Response, Request, NextFunction } from "express";
-import { verifyJwt } from "../lib/auth";
-import { User } from "../models/User";
+import { verifyJwt } from "../lib/auth.js";
+import { User } from "../models/User.js";
 
 export type AuthedRequest = Request & {
   user?: { id: string; name: string; email: string; isCreator: Boolean };

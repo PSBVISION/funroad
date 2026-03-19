@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { AuthedRequest, requireAuth } from "../middleware/requireAuth";
-import { ensureUniqueSlug, toSlug } from "../utils/slug";
-import { Product } from "../models/Product";
+import { AuthedRequest, requireAuth } from "../middleware/requireAuth.js";
+import { ensureUniqueSlug, toSlug } from "../utils/slug.js";
+import { Product } from "../models/Product.js";
 import mongoose from "mongoose";
-import { User } from "../models/User";
-import { ImageAsset } from "../models/ImageAsset";
+import { User } from "../models/User.js";
+import { ImageAsset } from "../models/ImageAsset.js";
 
 export const creatorProductRouter = Router();
 // auth middleware

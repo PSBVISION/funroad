@@ -1,8 +1,8 @@
 import "dotenv/config";
 
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { createApp } from "../src/app";
-import { connectMongo } from "../src/db";
+import { createApp } from "../src/app.js";
+import { connectMongo } from "../src/db.js";
 
 const app = createApp();
 
@@ -20,6 +20,11 @@ async function ensureMongoConnected() {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // Preflight should not depend on database availability.
+  if (req.method === "OPTIONS") {
+    return app(req, res);
+  }
+
   await ensureMongoConnected();
   return app(req, res);
 }

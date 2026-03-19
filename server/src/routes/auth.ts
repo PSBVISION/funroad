@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { User } from "../models/User";
-import { hashPassword, signJwt, verifyPassword } from "../lib/auth";
-import { AuthedRequest, requireAuth } from "../middleware/requireAuth";
+import { User } from "../models/User.js";
+import { hashPassword, signJwt, verifyPassword } from "../lib/auth.js";
+import { AuthedRequest, requireAuth } from "../middleware/requireAuth.js";
 
 export const authRouter = Router();
 

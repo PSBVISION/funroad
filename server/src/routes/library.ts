@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { AuthedRequest, requireAuth } from "../middleware/requireAuth";
+import { AuthedRequest, requireAuth } from "../middleware/requireAuth.js";
 import mongoose, { Types } from "mongoose";
-import { Order } from "../models/Order";
-import { Product } from "../models/Product";
-import { ImageAsset } from "../models/ImageAsset";
+import { Order } from "../models/Order.js";
+import { Product } from "../models/Product.js";
+import { ImageAsset } from "../models/ImageAsset.js";
 
 export const libraryRouter = Router();
 

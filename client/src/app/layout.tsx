@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="hydrated">
       <body className="min-h-dvh bg-[#f6f6f4] text-zinc-900 antialiased">
         {/* razorpay script loading */}
         <Script

@@ -1,7 +1,7 @@
 import "dotenv/config";
 
-import { createApp } from "./app";
-import { connectMongo } from "./db";
+import { createApp } from "./app.js";
+import { connectMongo } from "./db.js";
 
 async function main() {
   await connectMongo();

@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { Product } from "../models/Product";
-import { ImageAsset } from "../models/ImageAsset";
+import { Product } from "../models/Product.js";
+import { ImageAsset } from "../models/ImageAsset.js";
 
 export const publicProductsRouter = Router();
 

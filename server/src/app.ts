@@ -1,19 +1,28 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import { authRouter } from "./routes/auth";
-import { creatorProductRouter } from "./routes/creatorProduct";
-import { creatorImportRouter } from "./routes/creatorImport";
-import { publicProductsRouter } from "./routes/publicProducts";
-import { checkoutRouter } from "./routes/checkout";
-import { creatorSalesRouter } from "./routes/creatorSales";
-import { libraryRouter } from "./routes/library";
+import { authRouter } from "./routes/auth.js";
+import { creatorProductRouter } from "./routes/creatorProduct.js";
+import { creatorImportRouter } from "./routes/creatorImport.js";
+import { publicProductsRouter } from "./routes/publicProducts.js";
+import { checkoutRouter } from "./routes/checkout.js";
+import { creatorSalesRouter } from "./routes/creatorSales.js";
+import { libraryRouter } from "./routes/library.js";
+
+const defaultAllowedOrigins = [
+  "https://funroad.vercel.app",
+  "https://funroad.psbvision.engineer",
+];
 
 function resolveAllowedOrigins() {
-  return (process.env.FRONTEND_ORIGIN ?? "")
+  const configuredOrigins = (process.env.FRONTEND_ORIGIN ?? "")
     .split(",")
     .map((origin) => origin.trim())
     .filter(Boolean);
+
+  return configuredOrigins.length > 0
+    ? configuredOrigins
+    : defaultAllowedOrigins;
 }
 
 export function createApp() {
@@ -26,6 +35,9 @@ export function createApp() {
       origin: (origin, callback) => {
         if (!origin) return callback(null, true);
         if (allowedOrigins.includes(origin)) return callback(null, true);
+        if (/^https:\/\/[a-z0-9-]+\.psbvision\.engineer$/i.test(origin)) {
+          return callback(null, true);
+        }
         if (
           allowVercelPreview &&
           /^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin)

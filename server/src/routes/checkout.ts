@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { AuthedRequest, requireAuth } from "../middleware/requireAuth";
+import { AuthedRequest, requireAuth } from "../middleware/requireAuth.js";
 import z from "zod";
-import { Product } from "../models/Product";
-import { razorpay, toSubunits } from "../lib/razorpay";
-import { Order } from "../models/Order";
+import { Product } from "../models/Product.js";
+import { razorpay, toSubunits } from "../lib/razorpay.js";
+import { Order } from "../models/Order.js";
 import crypto from "crypto";
 
 export const checkoutRouter = Router();
